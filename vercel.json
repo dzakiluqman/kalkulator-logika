@@ -5,6 +5,24 @@
             "runtime": "vercel-php@0.6.0"
         }
     },
+    "builds": [
+    {
+      "src": "public/index.php",
+      "use": "@vercel/php",
+      "config": {
+        "includeFiles": [
+          "app/**",
+          "bootstrap/**",
+          "config/**",
+          "database/**",
+          "resources/**",
+          "routes/**",
+          "storage/**",
+          "vendor/**"
+        ]
+      }
+    }
+  ],
     "routes": [
       {
         "src": "/(.*)",
